@@ -1,0 +1,560 @@
+
+  
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riya Goel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="media.css">
+  
+  <style>
+   
+
+/* Full page gradient */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background: linear-gradient(
+    to bottom,
+    #edc7d1 0%,     /* soft pink top */
+    #e3d0dd 100%    /* golden beige bottom */
+  );
+
+  background-attachment: fixed; /* smooth scroll */
+}
+
+/* Header transparent so gradient shows */
+header {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Text style */
+.header-text {
+  font-weight: 600;
+  color: #4a2c2a;
+}
+
+/* Buttons visibility */
+.btn-outline-success,
+.btn-outline-primary {
+  background-color: rgba(255,255,255,0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Logo wrapper */
+.logo-box {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+/* Image */
+.logo-img {
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.logo-box:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.logo-box:hover .logo-img {
+  transform: scale(1.07);
+}
+
+/* Center tagline */
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #4a2c2a;          /* warm brown */
+  letter-spacing: 0.5px;
+  position: relative;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+/* Highlight brand name */
+.tagline span {
+  color: #8b3a62;          /* cake pink */
+  font-weight: 600;
+  position: relative;
+}
+
+/* Underline animation */
+.tagline span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #c97b9c;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover effect */
+.tagline:hover {
+  transform: scale(1.03);
+  text-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.tagline:hover span::after {
+  width: 100%;
+}
+
+
+
+
+/* Moving line container */
+.moving-line {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  background: #f3d6dc; /* light pink base */
+  position: relative;
+}
+
+/* Animated line */
+.moving-line span {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #c97b84,
+    #f5a6b3,
+    #c97b84
+  );
+  animation: moveLine 3s linear infinite;
+  border-radius: 10px;
+}
+
+/* Animation */
+@keyframes moveLine {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+/* ===================== */
+/* MOBILE RESPONSIVE FIX */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* Logo center */
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* Header row alignment */
+  header .row {
+    text-align: center;
+  }
+
+  /* Buttons fixed at bottom */
+  header .col-lg-4 {
+    position: fixed;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+  }
+
+  /* Buttons size for mobile */
+  header .btn {
+    width: 45%;
+    font-size: 14px;
+  }
+
+  /* Moving line little spacing */
+  .moving-line {
+    margin-bottom: 70px; /* space for bottom buttons */
+  }
+}
+
+
+/* Cake image hover effect */
+img.rounded {
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+img.rounded:hover {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.pink-quote {
+  color: #4a2c2a;
+  font-style: italic;
+  font-size: medium;
+}
+
+
+  .btn-soft {
+    background-color: #e9ddea;
+    color: #4a2c2a;
+    border: none;
+  }
+  .btn-soft:hover {
+    background-color: #e0cfe2;
+    color: #4a2c2a;
+  }
+
+  
+  .btn-fixed {
+    width: 170px;        /* same width for all */
+    background-color: #e9ddea;
+    color: #4a2c2a;
+    border: none;
+  }
+
+  .btn-fixed:hover {
+    background-color: #e0cfe2;
+    color: #4a2c2a;
+  }
+
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="container-fluid py-3">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LOGO -->
+
+      <div class="col-lg-3 col-md-4 col-12">
+        
+          <div class="logo-box">
+  <img
+    src="https://i.etsystatic.com/11758033/r/il/72de7e/1039981408/il_fullxfull.1039981408_rm5s.jpg"
+    alt="Logo"
+    class="logo-img"
+    height="90">
+</div>
+      </div>
+
+      <!-- TEXT IN BETWEEN -->
+      <div class=" main col-lg-5 col-md-4 col-12 text-center mt-2 mt-md-0">
+       
+
+
+
+      <p class="tagline">
+  Celebrate in loop with <span>cake loop</span>
+</p>
+      </div>
+
+
+    
+
+      <!-- BUTTONS -->
+      <div class="col-lg-4 col-md-4 col-12 text-lg-end text-center mt-3 mt-md-0">
+        <button class="btn btn-outline-success me-2 px-3">
+          <i class="fa-brands fa-whatsapp"></i> Chat with us
+        </button>
+
+        <button class="btn btn-outline-primary px-3">
+          <i class="fa-solid fa-phone"></i> Contact us
+        </button>
+      </div>
+
+    </div>
+  </div>
+ 
+
+
+ <!-- Moving Line -->
+<div class="moving-line">
+  <span></span>
+</div>
+
+
+<img 
+  src="https://cdn.pixabay.com/photo/2023/03/14/21/29/birthday-cake-7853211_1280.jpg"
+  class="rounded float-start m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+
+<img 
+  src="https://cdn.pixabay.com/photo/2023/09/04/20/39/cake-8233676_1280.jpg"
+  class="rounded float-end m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  <img 
+  src="https://funcakes.com/content/uploads/2022/07/Fun-Cakes-20220721-Sweet-16-Boys-02-960x720-c-default.jpg"
+  class="rounded float-start m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  
+<img 
+  src="https://images5.alphacoders.com/983/983077.jpg"
+  class="rounded float-end m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+
+<img 
+  src="https://wallpapers.com/images/hd/happy-birthday-cake-900-x-900-picture-octpyjkdeug1t81z.jpg"
+  class="rounded float-start m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  
+<img 
+  src="https://static.vecteezy.com/system/resources/previews/031/697/090/non_2x/free-front-view-of-cake-with-whipped-cream-free-photo.jpg"
+  class="rounded float-end m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+
+  <img 
+  src="https://www.cookingclassy.com/wp-content/uploads/2019/07/birthday-cake-4.jpg"
+  class="rounded float-start m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  
+<img 
+  src="https://wallpaperaccess.com/full/1555891.jpg"
+  class="rounded float-end m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  <img 
+  src="https://wallpapers.com/images/hd/chocolate-drip-cake-id7tqwppa5et6gm2.jpg"
+  class="rounded float-start m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+  
+<img 
+  src="https://funcakes.com/content/uploads/2022/04/Fun-Cakes-20220324-Roze_trouwtaaart-fondant-02-960x960-c-default.jpg"
+  class="rounded float-end m-8 py-4 px-2"
+  alt="img"
+  height="170"
+  width="150">
+
+
+
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p class="pink-quote">
+      "We live by this philosophy. Each of our cakes is freshly baked using premium ingredients, rich flavors, and thoughtfully crafted designs. From soft sponges and creamy frostings to artistic decorations, our cakes are made to transform ordinary moments into unforgettable celebrations."
+    </p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    <cite title="Source Title">Marcel Proust</cite>
+  </figcaption>
+</figure>
+
+
+
+<div class="btn-group">
+  <button type="button"
+    class="btn dropdown-toggle"
+    style="background-color:#e9ddea; color:#4a2c2a";
+    data-bs-toggle="dropdown"
+    aria-expanded="false">
+    By Occasion
+  </button>
+
+  <ul class="dropdown-menu ">
+    <li><a class="dropdown-item" href="#">Congratulations Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Farewell Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Wedding Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Anniversary Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Festival Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Bento Cakes</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+
+<div class="btn-group m-1">
+  <button class="btn btn-soft dropdown-toggle" data-bs-toggle="dropdown">
+    Special
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Bestseller Cakes</a></li>
+    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+    <li><a class="dropdown-item" href="#">Custom-Made Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Same Day Delivery Cakes</a></li>
+     <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+
+<div class="btn-group m-1">
+  <button class="btn btn-soft dropdown-toggle" data-bs-toggle="dropdown">
+    By Size
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Half Kg Cakes</a></li>
+    <li><a class="dropdown-item" href="#">1 Kg Cakes</a></li>
+    <li><a class="dropdown-item" href="#">2 Kg Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Custom Size Cakes</a></li>
+     <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+<div class="btn-group m-1">
+  <button class="btn btn-soft dropdown-toggle" data-bs-toggle="dropdown">
+    By Theme
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Cartoon Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Kids Theme Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Floral Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Minimalist Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Luxury / Premium Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Romantic Cakes</a></li>
+     <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+<div class="btn-group m-1">
+  <button class="btn btn-soft dropdown-toggle" data-bs-toggle="dropdown">
+    Dietary
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Eggless Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Egg Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Sugar-Free Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Vegan Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Gluten-Free Cakes</a></li>
+     <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+
+<div class="btn-group m-1">
+  <button class="btn btn-soft dropdown-toggle" data-bs-toggle="dropdown">
+    By Type
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Cream Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Fondant Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Designer Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Photo Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Pinata Cakes</a></li>
+    <li><a class="dropdown-item" href="#">Pull-Me-Up Cakes</a></li>
+    <li><a class="dropdown-item" href="amazon.html">Jar Cakes</a>
+</li>
+
+    <li><a class="dropdown-item" href="#">Cupcakes</a></li>
+    <li><a class="dropdown-item" href="#">Pastry Cakes</a></li>
+     <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">All</a></li>
+  </ul>
+</div>
+
+
+
+
+    <div class="container mt-5">
+  <div class="row justify-content-end">
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="col-lg-6">
+
+  
+
+      <form class="row g-3">
+
+        <div class="col-md-6 col-12">
+          <label class="form-label">First name</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="col-md-6 col-12">
+          <label class="form-label">Last name</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="col-md-6 col-12">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="col-md-6 col-12">
+          <label class="form-label">Zip</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-primary px-4">Submit</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+       
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
